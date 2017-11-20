@@ -1,0 +1,27 @@
+<html ng-app="app">
+<head>
+  <title>Hello World in AngularJS</title>
+  <% include ./genHead.ejs%>
+  
+</head>
+
+<div ng-show="!vm.clicked">
+	<body ng-controller="angularController as vm">
+	
+	<ul>
+	  <li ng-repeat="todo in vm.todos">
+	    <input type="checkbox" ng-model="todo.completed">
+	    {{ todo.name }}
+	  </li>
+	</ul>
+	{{vm.boi}}
+	{{vm.gal}}
+	{{vm.sum}}
+
+</div>
+<div ng-show="vm.clicked">
+	<% include ./testPage.ejs %>
+</div>
+<button type="submit" ng-click="vm.triggered()"> Go to Magic</button>
+</body>
+</html>
