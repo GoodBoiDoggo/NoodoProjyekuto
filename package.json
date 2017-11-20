@@ -3,12 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "ejs": "*",
     "express": "3.2.6",
-    "mongoose": "^4.13.3",
-    "nodemon": "^1.12.1"
+    "mongoose": "^4.13.3"
   }
 }

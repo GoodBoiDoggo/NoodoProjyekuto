@@ -10,5 +10,8 @@ module.exports = function(app){
 		console.log("BOI");
 		res.send("");
 	});
-	
+	app.get('/api3', function(req,res){
+		console.log("YO DAWG");
+		res.json({firstname: 'Joni', lastname: 'Depth'});
+	});
 }

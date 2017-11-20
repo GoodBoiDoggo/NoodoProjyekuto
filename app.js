@@ -25,8 +25,7 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/boi', express.static(path.join(__dirname, 'controllers')));
-app.use('/boistrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
-app.use('/boiii', express.static(patch.join(__dirname,'views')));
+//sdsd
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -34,6 +33,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 testController(app);
+
 
 app.get('/users', user.list);
 
