@@ -19,7 +19,10 @@ If you are a female user, send 5 legit selfies to the project master before clon
 
 ## Developing
 
-
+You may install software like Nodemon to make life easier.
+```
+npm install nodemon --save -dev
+```
 
 ### Tools
 
