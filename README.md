@@ -20,10 +20,14 @@ If you are a female user, send 5 legit selfies to the project master before clon
 ## Developing
 
 You may install software like Nodemon to make life easier.
+This method of installing is deprecated:
 ```
 npm install nodemon --save -dev
 ```
-
+Instead, use this method:
+```
+npm install nodemon --save --only=dev
+```
 ### Tools
 
 Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
