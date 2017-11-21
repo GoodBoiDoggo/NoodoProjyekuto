@@ -25,7 +25,7 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/boi', express.static(path.join(__dirname, 'controllers')));
-//sdsd
+//sdsdsfsdfsd
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -37,7 +37,7 @@ testController(app);
 
 app.get('/users', user.list);
 
-
+//app.get('/bois', bois.good);
 
 
 
