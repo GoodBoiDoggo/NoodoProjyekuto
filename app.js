@@ -11,8 +11,9 @@ var express = require('express')
 
 var app = express();
 var testController = require('./controllers/testController');
-
-
+var mongoose = require('mongoose');
+var config = require('./config');
+var setupController = require('./controllers/setupController');
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
@@ -38,8 +39,8 @@ testController(app);
 app.get('/users', user.list);
 
 //app.get('/bois', bois.good);
-
-
+mongoose.connect(config.getDbConnectionString());
+setupController(app);
 
 
 
