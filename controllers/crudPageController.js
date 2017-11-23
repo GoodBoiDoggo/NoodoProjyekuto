@@ -20,18 +20,26 @@ function crudPageController($scope,$http){
 //	    ];
 	 
 	 vm.testboi = testboi;
+	 vm.addTodo = addTodo;
+	 
 	 testboi();
 	 function testboi(){
 		 $http.get('/api/all')
 		 .then(function(response){
 			 vm.todos = response.data;
 		 })
-		 
-		 
-		 
-		 
-
-	 
 	 }
 	 
+	 function addTodo(username,todo){
+		 $http({
+			    method: 'POST',
+			    url: '/api/add',
+			    data: {username:username,todo: todo},
+			    headers: {'Content-Type': 'application/json'}
+			});
+		 testboi();
+	 }
+	 
+	 
 }
+
