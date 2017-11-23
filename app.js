@@ -14,6 +14,9 @@ var testController = require('./controllers/testController');
 var mongoose = require('mongoose');
 var config = require('./config');
 var setupController = require('./controllers/setupController');
+var apiController = require('./controllers/apiController');
+var bodyParser = require('body-parser');
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
@@ -36,12 +39,13 @@ app.get('/', routes.index);
 testController(app);
 
 
+
 app.get('/users', user.list);
 
 //app.get('/bois', bois.good);
 mongoose.connect(config.getDbConnectionString());
 setupController(app);
-
+apiController(app);
 
 
 http.createServer(app).listen(app.get('port'), function(){

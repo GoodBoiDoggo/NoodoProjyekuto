@@ -23,6 +23,8 @@ function angularController($scope) {
     
 	  vm.longlib = longlib;
 	  vm.triggered = triggered;
+	 
+	  
 	  function longlib(data1, data2){
 		  vm.sum = (Number(data1)+Number(data2) || 0);
 		  console.log("BOI");
@@ -36,5 +38,6 @@ function angularController($scope) {
 			  vm.clicked = true;
 		  }
 	  }
+	 
 }
 

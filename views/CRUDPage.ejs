@@ -1,0 +1,48 @@
+<html ng-app="app">
+	<head>
+		
+		<% include ./genHead.ejs %>
+		<script src="boi/crudPageController.js"></script>
+	</head>
+	<body ng-controller="crudPageController as vm">
+		<div id="whitespace" class="row"></div>
+		
+		<div class="container">
+		
+			<div class="jumbotron">
+				<h1> 1101 1010 1101 0010 1101</h1>
+				
+			</div>
+			{{vm.boi}}
+			<table class="table">
+				
+				<thead>
+					<tr>
+						<td>
+							USERNAME
+						</td>
+						<td>
+							TODO
+						</td>
+						<td>
+							ISDONE
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in vm.todos">
+						<td>
+							{{x.username}}
+						</td>
+						<td>
+							{{x.todo}}
+						</td>
+						<td>
+							<input type="checkbox" ng-model="x.isDone">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

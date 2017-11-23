@@ -1,8 +1,9 @@
 <html ng-app="app">
 <head>
-  <title>Hello World in AngularJS</title>
-  <% include ./genHead.ejs%>
+  <title>Hello Boi in BoiJS</title>
   
+  <% include ./genHead.ejs%>
+  <script src='boi/angularController.js'></script>
 </head>
 
 <div ng-show="!vm.clicked">
@@ -22,6 +23,9 @@
 <div ng-show="vm.clicked">
 	<% include ./testPage.ejs %>
 </div>
-<button type="submit" ng-click="vm.triggered()"> Go to Magic</button>
+<button type="button" ng-click="vm.triggered()"> Go to Magic</button>
+<form action="/crud" method="get">
+	<button type="submit" > Go to Not Magic</button>
+</form>
 </body>
 </html>

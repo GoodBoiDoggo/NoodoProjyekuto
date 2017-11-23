@@ -1,4 +1,5 @@
-exports.list=function(req, res){
+
+exports.list = function(req, res){
 //	res.json({"animals": "DOGGO"});
-	res.send("asdasdasd");
+	res.send("asdasdasd");  
 };

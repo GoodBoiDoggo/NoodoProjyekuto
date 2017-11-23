@@ -3,7 +3,7 @@ var Todos = require('../models/todoModel');
 var mongoose = require('mongoose');
 
 module.exports = function(app){ 
-	app.get('/boisen', function(req,res){
+	app.get('/setup', function(req,res){
 //		
 //	
 //		var starterTodos = [
@@ -29,12 +29,6 @@ module.exports = function(app){
 		})
 		
 	})
-	app.get('/boisen/:id', function(req,res){
-		Todos.find({_id: req.params.id},
-				function(err,results){
-					res.send(results);
-		
-		})
-	})
+	
 		
 }
