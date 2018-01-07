@@ -34,12 +34,11 @@ For some reason, di sha ma save sa package.json as a dev dependecy. Bsin kailang
 
 ### Running the app with nodemon
 
-To run the project using nodemon, open cmd or the terminal window of eclipse(Monitor icon at the upper left),
-then run this command:
+To run the project using nodemon, open cmd or other usable terminals then input:
 ```
-npm start
+nodemon app.js
 ```
-This works kay gichange nako ang "start" na property sa package.json
+
 
 ### Tools
 
